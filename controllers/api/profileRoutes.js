@@ -19,14 +19,14 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.put('/edit', async (req, res) => {
+  router.get('/edit', async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         include: [{ all: true, nested: true }],
       });
       const users = userData.get({ plain: true });
-      res.render('profile', {
+      res.render('edit', {
         users,
         logged_in: req.session.logged_in,
 

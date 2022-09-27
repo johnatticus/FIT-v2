@@ -235,6 +235,12 @@ a.nav-link {
   padding: 10px;
   text-align: center;
 }
+
+.modal-footer {
+  border: 0;
+  margin: .25rem;
+}
+
 /* .background-img {
   background-image: url(/images/seamless-dumbbell-pattern.jpg);
   background-repeat: repeat;
