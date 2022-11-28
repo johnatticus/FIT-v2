@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="/css/jass.css">
   {{!-- <link rel="stylesheet" href="/css/results.css"> --}}
 </head>
-
+<body>
+<container class="container">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex flex-row sticky py-4">
 			<a class="navbar-brand" href="/api/profile/"><img class="img-responsive" width="80px" height="" src="/images/FITlogo.png">
@@ -40,17 +41,16 @@
 			</div>
 		</nav>
 
-<body>
-  <main>
-    {{{ body }}}
-  </main>
-  <footer>
 
-  </footer>
+    {{{ body }}}
+  {{!-- <footer>
+
+  </footer> --}}
 
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+</container>
 </body>
 
 </html>

@@ -1,7 +1,6 @@
-<container class="container">
   <!-- Loop over each object in the users array from resultsRoutes.js to create a user card with the results -->
   {{#with users as |user| }}
-  <div class="rela-block profile-container">
+  {{!-- <div class="rela-block profile-container">
     <div class="rela-block profile-card">
       <container class="button-container d-flex justify-content-around">
         <button type="button" class="button friends-button" data-bs-toggle="modal"
@@ -12,21 +11,21 @@
         id="profile_pic"></div>
       <div class="rela-block profile-name-container">
         <div class="rela-block user-name" id="user_name">{{user.first_name}} {{user.last_name}}</div>
-        <div class="rela-block user-desc" id="user_description">
-          <ul class="profile-list">
-            <li>{{user.city}}, {{user.state}}</li>
-            <li>{{user.gender}}</li>
-            <li>{{user.fitness_level}}</li>
-            <li>{{gym.name}}</li>
-            <li>{{user.availability}}</li>
-          </ul>
-        </div>
+          <div class="rela-block user-desc" id="user_description">
+            <ul class="profile-list">
+              <li>{{user.city}}, {{user.state}}</li>
+              <li>{{user.gender}}</li>
+              <li>{{user.fitness_level}}</li>
+              <li>{{gym.name}}</li>
+              <li>{{user.availability}}</li>
+            </ul>
+          </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
-
+  </div> --}}
+<section>
+  <h1>hey it's {{user.first_name}} {{user.last_name}} from {{user.city}}</h1>
+</section>
 <!-- Edit Modal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -246,7 +245,7 @@
 </div>
 
   {{/with}}
-</container>
+
 
 {{!-- Talk JS Modal --}}
 <script>

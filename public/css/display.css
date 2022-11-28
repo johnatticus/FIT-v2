@@ -37,6 +37,7 @@ body {
 .sticky {
   position: fixed;
   min-width: 100%;
+  z-index: 1;
 }
 
 .box {
@@ -120,7 +121,7 @@ body {
 }
 
 nav nav:hover {
-  z-index:1; /*Add this*/
+  z-index: 2; /*Add this*/
   text-decoration: none;
 }
 

@@ -19,9 +19,9 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory;
   overflow: scroll;
-  scroll-snap-points-y: 300px;
+  scroll-snap-points-y: 300px; */
 }
 
 
@@ -31,7 +31,8 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  scroll-snap-align: start;
+  /* margin-top: 100px; */
+  /* scroll-snap-align: start; */
 }
 
 .sticky {
