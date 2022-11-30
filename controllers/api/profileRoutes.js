@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+  if (req.session.logged_in) {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
@@ -17,8 +19,14 @@ router.get('/', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+  }
+
+  res.render('login', {
+    layout: 'landing',
+  });
   });
 
+  // NO EDITING FUNCTIONALITY YET
   router.get('/edit', async (req, res) => {
     try {
       // Find the logged in user based on the session ID
