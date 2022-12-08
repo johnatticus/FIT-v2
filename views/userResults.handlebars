@@ -1,25 +1,37 @@
 <container class ="container">
 <!-- Loop over each object in the users array from resultsRoutes.js to create a user card with the results -->
 {{#each users as |user| }}
-<section
+<div class="card" style="width: 25rem;">
+  <div class="card-header">
+    Profile
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{user.city}}, {{user.state}}</li>
+    <li class="list-group-item">{{user.fitness_level}}</li>
+    <li class="list-group-item">{{user.availability}}</li>
+  </ul>
+</div>
+
+{{!-- <section
       class="page-2 row align-items-center justify-content-around vh-100">
       <!-- users display div -->
       <div class="box">
         <div id="overlay">
           <a href="/api/results/{{user.id}}">
             <div style="background-image: url('/images/userplaceholder.png');" class="image">
-            {{!-- Trick is the hover for the picture --}}
+            <!-- Trick is the hover for the picture -->
               <div class="trick">
               </div>
             </div>
           </div>
           <ul class="text">{{user.first_name}} {{user.last_name}}</ul>
           <p class="text1">{{user.city}}, {{user.state}}</p>
-          {{!-- <p class="text1">{{user.gender}}</p> --}}
           <p class="text1">{{user.fitness_level}}</p>
-          {{!-- <p class="text1">{{gym.name}}</p>
-          <p class="text1">{{user.availability}}</p> --}}
 
-    </section>
+    </section> --}}
     {{/each}}
     </container>
