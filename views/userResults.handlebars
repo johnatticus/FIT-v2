@@ -1,7 +1,7 @@
 {{!-- <container class ="container"> --}}
 <!-- Loop over each object in the users array from resultsRoutes.js to create a user card with the results -->
 {{#each users as |user| }}
-<div class="card" style="width: 25rem;">
+<div class="card" style="width: 20rem;">
   <div class="card-header">
     Profile
   </div>
@@ -15,7 +15,7 @@
     <li class="list-group-item">{{user.availability}}</li>
   </ul>
   <div class="card-body">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">View</button>
+    <a href="/api/results/{{user.id}}"><button type="button" class="btn btn-primary">View</button></a>
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editModal">Add</button>
   </div>
 </div>

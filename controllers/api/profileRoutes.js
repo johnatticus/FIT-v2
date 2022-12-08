@@ -30,18 +30,18 @@ router.get('/', withAuth, async (req, res) => {
   });
 
   // NO EDITING FUNCTIONALITY YET
-  router.get('/edit', async (req, res) => {
+  router.put('/:id', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.user_id, {
+      const userData = await User.update(req.session.user_id, {
         include: [{ all: true, nested: true }],
       });
-      const users = userData.get({ plain: true });
-      res.render('edit', {
-        users,
-        logged_in: req.session.logged_in,
+      // const users = userData.get({ plain: true });
+      // res.render('edit', {
+      //   users,
+      //   logged_in: req.session.logged_in,
 
-      });
+      // });
     } catch (err) {
       res.status(500).json(err);
     }
