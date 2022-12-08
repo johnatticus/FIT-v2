@@ -1,4 +1,4 @@
-<container class ="container">
+{{!-- <container class ="container"> --}}
 <!-- Loop over each object in the users array from resultsRoutes.js to create a user card with the results -->
 {{#each users as |user| }}
 <div class="card" style="width: 25rem;">
@@ -14,6 +14,10 @@
     <li class="list-group-item">{{user.fitness_level}}</li>
     <li class="list-group-item">{{user.availability}}</li>
   </ul>
+  <div class="card-body">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">View</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editModal">Add</button>
+  </div>
 </div>
 
 {{!-- <section
@@ -34,4 +38,4 @@
 
     </section> --}}
     {{/each}}
-    </container>
+    {{!-- </container> --}}
