@@ -3,7 +3,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
-  if (req.session.logged_in) {
+  // if (req.session.logged_in) {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
@@ -12,18 +12,21 @@ router.get('/', withAuth, async (req, res) => {
       });
       const users = userData.get({ plain: true });
       res.render('profile', {
+        layout: 'main',
         users,
-        logged_in: req.session.logged_in,
-
+        // logged_in: req.session.logged_in,
       });
     } catch (err) {
-      res.status(500).json(err);
+      res.render('login', {
+        layout: 'landing',
+      });
+      // res.status(500).json(err);
     }
-  }
+  // }
 
-  res.render('login', {
-    layout: 'landing',
-  });
+  // res.render('login', {
+  //   layout: 'landing',
+  // });
   });
 
   // NO EDITING FUNCTIONALITY YET

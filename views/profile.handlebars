@@ -56,27 +56,27 @@
         <div class="row mb-2">
 				<div class="col">
 					<label for="first-name-input" class="form-label">First name</label>
-					<input type="text" id="first-name-input" class="form-control" placeholder="{{user.first_name}}" aria-label="First name" />
+					<input type="text" id="first-name-input" class="form-control" value="{{user.first_name}}" aria-label="First name" />
 				</div>
 				<div class="col">
 					<label for="last-name-input" class="form-label">Last name</label>
-					<input type="text" id="last-name-input" class="form-control" placeholder="{{user.last_name}}" aria-label="Last name" />
+					<input type="text" id="last-name-input" class="form-control" value="{{user.last_name}}" aria-label="Last name" />
 				</div>
 			</div>
         <div class="row mb-2">
 				<div class="col">
 					<label for="email-input" class="form-label">Email</label>
-					<input type="email" id="email-input" class="form-control" placeholder="{{user.email}}" />
+					<input type="email" id="email-input" class="form-control" value="{{user.email}}" />
 				</div>
 				<div class="col">
 					<label for="password-input" class="form-label">Password</label>
-					<input type="password" id="password-input" class="form-control" placeholder="{{user.password}}" />
+					<input type="password" id="password-input" class="form-control" value="{{user.password}}" />
 				</div>
         </div>
         <div class="row mb-2">
 				<div class="col">
 					<label for="city-input" class="form-label">City</label>
-					<input type="text" id="city-input" class="form-control" placeholder="{{user.city}}" />
+					<input type="text" id="city-input" class="form-control" value="{{user.city}}" />
 				</div>
 				<div class="col">
 					<label for="state-input" class="form-label">State</label>
@@ -199,7 +199,7 @@
 </div>
 
 {{!-- Chat Modal that displays when the chat button is clicked on --}}
-<div class="modal fade" id="chatModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+{{!-- <div class="modal fade" id="chatModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -259,7 +259,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
   {{/with}}
 
@@ -274,7 +274,7 @@
       crossorigin="anonymous"
     ></script>
 {{!-- Talk JS Modal --}}
-<script>
+{{!-- <script>
   (function (t, a, l, k, j, s) {
     s = a.createElement('script'); s.async = 1; s.src = "https://cdn.talkjs.com/talk.js"; a.head.appendChild(s)
       ; k = t.Promise; t.Talk = {
@@ -286,7 +286,7 @@
         }
       };
   })(window, document, []);
-</script>
+</script> --}}
 <script src="/js/edit.js"></script>
 <script src="/js/talk.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
